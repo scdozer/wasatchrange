@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `https://scottcardoza.com/droneops/graphql`,
+        url: `https://scottcardoza.com/wasatchrange/graphql`,
         schema: {
           typePrefix: `Wp`,
         },
@@ -49,4 +49,4 @@ module.exports = {
       },
     },
   ],
-}
+};
