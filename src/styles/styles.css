@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  word-wrap: break-word;
+  font-kerning: normal;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+h3,
+h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #242424;
+}
+
+h1,
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: black;
+}
