@@ -1,18 +1,19 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Hero from "../components/Hero"
-import ImageContent from "../components/PageLayouts/ImageContent"
-import ContentImage from "../components/PageLayouts/ContentImage"
-import FullButton from "../components/PageLayouts/FullButton"
-import Full from "../components/PageLayouts/Full"
+import React from "react";
+import { graphql } from "gatsby";
+import Hero from "../components/Hero";
+import Gallery from "../components/PageLayouts/Gallery";
+import ImageContent from "../components/PageLayouts/ImageContent";
+import ContentImage from "../components/PageLayouts/ContentImage";
+import FullButton from "../components/PageLayouts/FullButton";
+import Full from "../components/PageLayouts/Full";
 
 const Page = ({ data }) => {
-  const { pageLayouts } = data.wpPage.pageLayouts
-  const { pageheading, pagesubheading } = data.wpPage.pageHeader
-  const isVideo = !!data.wpPage.pageHeader.headerbackgroundvideo
+  const { pageLayouts } = data.wpPage.pageLayouts;
+  const { pageheading, pagesubheading } = data.wpPage.pageHeader;
+  const isVideo = !!data.wpPage.pageHeader.headerbackgroundvideo;
   const backgroundUrl = data.wpPage.pageHeader.headerbackgroundvideo
     ? data.wpPage.pageHeader.headerbackgroundvideo.mediaItemUrl
-    : data.wpPage.pageHeader.headerbackgroundimage.mediaItemUrl
+    : data.wpPage.pageHeader.headerbackgroundimage.mediaItemUrl;
 
   return (
     <>
@@ -25,31 +26,53 @@ const Page = ({ data }) => {
         isVideo={isVideo}
       />
       {pageLayouts &&
-        pageLayouts.map(section => {
-          const typeName = section.__typename
-
+        pageLayouts.map((section) => {
+          const typeName = section.__typename;
           switch (typeName) {
             case "WpPage_Pagelayouts_PageLayouts_Imagecontent":
-              return <ImageContent key={section.id} {...section} />
+              return (
+                <div className="block">
+                  <ImageContent key={section.id} {...section} />
+                </div>
+              );
 
             case "WpPage_Pagelayouts_PageLayouts_Contentimage":
-              return <ContentImage key={section.id} {...section} />
+              return (
+                <div className="block">
+                  <ContentImage key={section.id} {...section} />
+                </div>
+              );
 
             case "WpPage_Pagelayouts_PageLayouts_Fullwithbutton":
-              return <FullButton key={section.id} {...section} />
+              return (
+                <div className="block">
+                  <FullButton key={section.id} {...section} />
+                </div>
+              );
 
             case "WpPage_Pagelayouts_PageLayouts_Fullcontent":
-              return <Full key={section.id} {...section} />
+              return (
+                <div className="block">
+                  <Full key={section.id} {...section} />
+                </div>
+              );
+
+            case "WpPage_Pagelayouts_PageLayouts_Gallery":
+              return (
+                <div className="block">
+                  <Gallery key={section.id} {...section} />
+                </div>
+              );
 
             default:
-              return <p>You done busted it.</p>
+              return <p>You done busted it.</p>;
           }
         })}
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
 
 export const pageQuery = graphql`
   query GET_PAGE($id: String!) {
@@ -59,6 +82,12 @@ export const pageQuery = graphql`
           ... on WpPage_Pagelayouts_PageLayouts_Imagecontent {
             rightcontent
             leftimage {
+              altText
+              mediaItemUrl
+            }
+          }
+          ... on WpPage_Pagelayouts_PageLayouts_Gallery {
+            images {
               altText
               mediaItemUrl
             }
@@ -94,4 +123,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

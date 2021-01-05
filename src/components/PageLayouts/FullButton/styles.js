@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const FullContainer = styled.div`
+  clear: both;
   text-align: center;
   background: #eee;
   padding: 20px 40px 40px 40px;

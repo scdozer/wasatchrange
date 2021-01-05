@@ -42,3 +42,10 @@ h2 {
   letter-spacing: 3px;
   color: black;
 }
+
+.block {
+  clear:both;
+  display:block;
+  width: 100%;
+  
+}

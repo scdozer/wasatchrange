@@ -1,6 +1,6 @@
-import React from "react"
-import Fade from "react-reveal/Fade"
-import { ContentContainer, Text, Image } from "./styles"
+import React from "react";
+import Fade from "react-reveal/Fade";
+import { ContentContainer, Text, Image } from "./styles";
 
 export default function ContentImage({ leftcontent, rightimage }) {
   return (
@@ -15,5 +15,5 @@ export default function ContentImage({ leftcontent, rightimage }) {
         />
       </ContentContainer>
     </Fade>
-  )
+  );
 }
