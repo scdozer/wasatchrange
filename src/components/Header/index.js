@@ -32,7 +32,7 @@ const Header = () => {
         <Open onClick={() => setOpen(!open)}>Menu</Open>
         {open && (
           <MobileNav>
-            <Menu onClick={() => setOpen(!open)} />
+            <Menu setOpen={setOpen} />
           </MobileNav>
         )}
       </Container>

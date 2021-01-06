@@ -13,26 +13,34 @@ const MENU_QUERY = graphql`
   }
 `;
 
-const renderMenuItem = (menuItem) => {
+const renderMenuItem = (menuItem, setOpen, i) => {
   if (menuItem.title !== "Home") {
-    return <Link to={menuItem.uri}>{menuItem.title}</Link>;
+    return (
+      <Link key={`menu${i}`} to={menuItem.uri} onClick={() => setOpen(false)}>
+        {menuItem.title}
+      </Link>
+    );
   }
 };
 
-const Menu = () => {
+const Menu = ({ setOpen }) => {
   const data = useStaticQuery(MENU_QUERY);
 
   if (data.allWpPage) {
     return (
       <>
-        {data.allWpPage.nodes.map((menuItem) => {
-          return renderMenuItem(menuItem);
+        {data.allWpPage.nodes.map((menuItem, i) => {
+          return renderMenuItem(menuItem, setOpen, i);
         })}
       </>
     );
   } else {
     return null;
   }
+};
+
+Menu.defaultProps = {
+  setOpen: () => null,
 };
 
 export default Menu;
