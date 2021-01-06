@@ -4,7 +4,6 @@ import "./styles.css";
 export default function Full({ images }) {
   const [open, setOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState();
-  console.log({ images });
 
   const Modal = () => {
     return (
@@ -20,6 +19,7 @@ export default function Full({ images }) {
     <div className="galleryContainer">
       {images.map((image, i) => (
         <div
+          key={`image${i}`}
           className="item"
           onClick={() => {
             return setOpen(true), setOpenIndex(i);

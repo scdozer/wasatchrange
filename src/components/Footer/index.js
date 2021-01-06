@@ -18,6 +18,7 @@ const Footer = () => (
             <a
               className="social-links"
               target="_blank"
+              rel="noreferrer"
               href="https://www.instagram.com/wasatchrangeaviation/"
             >
               <img width={30} height={30} src={instagram} alt="instagram" />
@@ -25,6 +26,7 @@ const Footer = () => (
             <a
               className="social-links"
               target="_blank"
+              rel="noreferrer"
               href="https://www.facebook.com/WasatchRangeAviation/"
             >
               <img width={30} height={30} src={facebook} alt="facebook" />

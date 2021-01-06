@@ -26,41 +26,41 @@ const Page = ({ data }) => {
         isVideo={isVideo}
       />
       {pageLayouts &&
-        pageLayouts.map((section) => {
+        pageLayouts.map((section, i) => {
           const typeName = section.__typename;
           switch (typeName) {
             case "WpPage_Pagelayouts_PageLayouts_Imagecontent":
               return (
-                <div className="block">
-                  <ImageContent key={section.id} {...section} />
+                <div key={`section${i}`} className="block">
+                  <ImageContent {...section} />
                 </div>
               );
 
             case "WpPage_Pagelayouts_PageLayouts_Contentimage":
               return (
-                <div className="block">
-                  <ContentImage key={section.id} {...section} />
+                <div key={`section${i}`} className="block">
+                  <ContentImage {...section} />
                 </div>
               );
 
             case "WpPage_Pagelayouts_PageLayouts_Fullwithbutton":
               return (
-                <div className="block">
-                  <FullButton key={section.id} {...section} />
+                <div key={`section${i}`} className="block">
+                  <FullButton {...section} />
                 </div>
               );
 
             case "WpPage_Pagelayouts_PageLayouts_Fullcontent":
               return (
-                <div className="block">
-                  <Full key={section.id} {...section} />
+                <div key={`section${i}`} className="block">
+                  <Full {...section} />
                 </div>
               );
 
             case "WpPage_Pagelayouts_PageLayouts_Gallery":
               return (
-                <div className="block">
-                  <Gallery key={section.id} {...section} />
+                <div key={`section${i}`} className="block">
+                  <Gallery {...section} />
                 </div>
               );
 
