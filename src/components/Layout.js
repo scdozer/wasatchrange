@@ -28,12 +28,11 @@ const variants = {
 
 const Layout = (props) => {
   const { children } = props;
-  console.log({ props });
   return (
     <>
       <SEO title={props?.data?.wpPage?.title || ""} />
       <Body>
-        <Header />
+        <Header setFalse={false} />
         <AnimatePresence>
           <motion.main
             key={

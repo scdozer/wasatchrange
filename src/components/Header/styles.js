@@ -4,7 +4,7 @@ export const HeaderContainer = styled.div`
   z-index: 20000;
   // background: rgba(0, 0, 0, 0.5);
   background: white;
-  padding: 15px 0px;
+  // padding: 15px 0px;
   a {
     text-decoration: none;
   }
@@ -13,7 +13,9 @@ export const HeaderContainer = styled.div`
 export const HeaderFlex = styled.div`
   display: flex;
   justify-content: space-between;
+  height: 90px;
   @media (max-width: 960px) {
+    height: auto;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -27,12 +29,8 @@ export const Logo = styled.div`
   line-height: 45px;
   text-decoration: none;
   img {
-    position: absolute;
-    top: -5px;
-    left: 10;
-    height: 120px;
+    height: 90px;
     width: auto;
-    z-index: 1000;
   }
   a {
     text-decoration: none;
@@ -80,6 +78,7 @@ export const MobileNav = styled.div`
 
 export const Open = styled.div`
   cursor: pointer;
+  margin-bottom: 10px;
   width: 100%;
   border: 1px solid black;
   padding: 8px;

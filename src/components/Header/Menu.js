@@ -1,5 +1,5 @@
-import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 const MENU_QUERY = graphql`
   {
@@ -11,28 +11,28 @@ const MENU_QUERY = graphql`
       }
     }
   }
-`
+`;
 
-const renderMenuItem = menuItem => {
+const renderMenuItem = (menuItem) => {
   if (menuItem.title !== "Home") {
-    return <Link to={menuItem.uri}>{menuItem.title}</Link>
+    return <Link to={menuItem.uri}>{menuItem.title}</Link>;
   }
-}
+};
 
 const Menu = () => {
-  const data = useStaticQuery(MENU_QUERY)
+  const data = useStaticQuery(MENU_QUERY);
 
   if (data.allWpPage) {
     return (
       <>
-        {data.allWpPage.nodes.map(menuItem => {
-          return renderMenuItem(menuItem)
+        {data.allWpPage.nodes.map((menuItem) => {
+          return renderMenuItem(menuItem);
         })}
       </>
-    )
+    );
   } else {
-    return null
+    return null;
   }
-}
+};
 
-export default Menu
+export default Menu;
