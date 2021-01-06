@@ -31,7 +31,7 @@ const Layout = (props) => {
   console.log({ props });
   return (
     <>
-      <SEO title={props.data.wpPage.title} />
+      <SEO title={props?.data?.wpPage?.title || ""} />
       <Body>
         <Header />
         <AnimatePresence>

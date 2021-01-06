@@ -84,6 +84,10 @@ export const Open = styled.div`
   border: 1px solid black;
   padding: 8px;
   text-align: center;
+  display: none;
+  @media (max-width: 800px) {
+    display: block;
+  }
 `;
 
 export const Navigation = styled.div`
