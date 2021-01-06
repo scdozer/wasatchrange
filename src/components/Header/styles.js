@@ -90,6 +90,7 @@ export const Open = styled.div`
 `;
 
 export const Navigation = styled.div`
+  margin-top: 20px;
   color: black;
   font-size: 18px;
   font-weight: 300;
@@ -103,6 +104,7 @@ export const Navigation = styled.div`
     color: #666;
   }
   @media (max-width: 960px) {
+    margin-top: 0px;
     a {
       font-size: 16px;
       line-height: 25px;
