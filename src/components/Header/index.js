@@ -11,7 +11,9 @@ const Header = () => {
       <Container>
         <HeaderFlex>
           <Link to={"/"}>
-            <Logo>Wasatch Range Aviation</Logo>
+            <Logo>
+              <img src="/logo.jpg" alt="Wasatch Range Aviation" />
+            </Logo>
           </Link>
           <Navigation>
             <Menu />

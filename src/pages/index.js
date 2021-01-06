@@ -76,6 +76,7 @@ export default IndexPage;
 export const homeQuery = graphql`
   query GET_HOME_PAGE {
     wpPage(id: { eq: "cG9zdDoyMA==" }) {
+      title
       pageLayouts {
         pageLayouts {
           ... on WpPage_Pagelayouts_PageLayouts_Imagecontent {

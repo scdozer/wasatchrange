@@ -1,9 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const FooterContainer = styled.div`
+  clear: both;
   background: black;
   padding: 60px 0px;
-`
+`;
 
 export const FooterContent = styled.div`
   text-align: center;
@@ -18,4 +19,4 @@ export const FooterContent = styled.div`
     text-decoration: none;
     color: white;
   }
-`
+`;

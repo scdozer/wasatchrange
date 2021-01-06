@@ -26,11 +26,23 @@ export const Logo = styled.div`
   font-weight: 400;
   line-height: 45px;
   text-decoration: none;
+  img {
+    position: absolute;
+    top: -5px;
+    left: 10;
+    height: 120px;
+    width: auto;
+    z-index: 1000;
+  }
   a {
     text-decoration: none;
   }
   @media (max-width: 960px) {
     line-height: 30px;
+    img {
+      position: relative;
+      margin: 0 auto;
+    }
   }
 `;
 

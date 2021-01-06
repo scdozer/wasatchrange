@@ -77,6 +77,7 @@ export default Page;
 export const pageQuery = graphql`
   query GET_PAGE($id: String!) {
     wpPage(id: { eq: $id }) {
+      title
       pageLayouts {
         pageLayouts {
           ... on WpPage_Pagelayouts_PageLayouts_Imagecontent {

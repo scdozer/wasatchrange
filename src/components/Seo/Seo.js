@@ -1,75 +1,60 @@
-import PropTypes from "prop-types";
 import React from "react";
 import Helmet from "react-helmet";
 
-function SEO({ description, lang, meta, keywords, title }) {
-
+function SEO({ lang, title, description }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       meta={[
         {
           name: `description`,
-          content: description
+          content: description,
         },
         {
           property: `og:title`,
-          content: title
+          content: title,
         },
         {
           property: `og:description`,
-          content: description
+          content: description,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: title
+          content: title,
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: description
-        }
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `)
-              }
-            : []
-        )
-        .concat(meta)}
+          content: description,
+        },
+        {
+          name: `keywords`,
+          content: `Utah Flight School, Utah Flight Instructor, Utah Flight Instruction, Flight Instruction, Flight School, Utah Flight School`,
+        },
+      ]}
       title={title}
-      titleTemplate={`%s | ${title}`}
+      titleTemplate={`${title} | Wasatch Range Aviation`}
     />
   );
 }
 
 SEO.defaultProps = {
   lang: `en`,
-  keywords: [],
-  meta: []
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  title: PropTypes.string.isRequired
+  title: `Wasatch Range Aviation | UTAH`,
+  description: `Utah Flight Training and Instruction`,
 };
 
 export default SEO;
