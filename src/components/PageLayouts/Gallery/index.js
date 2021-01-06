@@ -9,7 +9,10 @@ export default function Full({ images }) {
   const Modal = () => {
     return (
       <div className="modal" onClick={() => setOpen(false)}>
-        <img src={images[openIndex].mediaItemUrl} />
+        <img
+          src={images[openIndex].mediaItemUrl}
+          alt="Wasatch Range Aviation"
+        />
       </div>
     );
   };
