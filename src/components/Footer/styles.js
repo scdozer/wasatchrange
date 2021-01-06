@@ -18,5 +18,12 @@ export const FooterContent = styled.div`
     line-spacing: 3px;
     text-decoration: none;
     color: white;
+    .social-links {
+      display: inline-block;
+    }
+  }
+  .social-links {
+    display: inline-block;
+    margin: 10px;
   }
 `;
