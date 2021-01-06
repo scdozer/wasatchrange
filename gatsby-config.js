@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby WordPress Tutorial`,
-    description: `An example to learn how to source data from WordPress.`,
-    author: `@gatsbyjs`,
+    title: "Wastach Range Aviation",
+    titleTemplate: "Flight training along the Wasatch Front!",
+    description:
+      "Private Pilots License, Instrument Rating, Commercial Certificate, Certificated Flight Instructor, Certificated Flight Instructor – Instrument, Complex endorsements, Technically Advanced Aircraft training, Biennial Flight Reviews, Instrument Proficiency Checks, Rusty Pilot training, Discovery Flights",
+    url: "https://wasatchrangeaviation.com", // No trailing slash allowed!
   },
   plugins: [
     `gatsby-plugin-postcss`,

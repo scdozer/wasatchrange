@@ -1,8 +1,9 @@
-import styled, { css } from "styled-components"
+import styled, { css } from "styled-components";
+import Fade from "react-reveal/Fade";
 
 export const Body = styled.div`
   // margin: -8px;
-`
+`;
 
 export const Container = styled.div`
   flex-grow: 1;
@@ -21,7 +22,7 @@ export const Container = styled.div`
     max-width: 1244px;
   }
 
-  ${props =>
+  ${(props) =>
     props.fluid &&
     css`
       padding: 0;
@@ -29,30 +30,30 @@ export const Container = styled.div`
       background: black;
       max-width: 100% !important;
     `}
-`
+`;
 
 export const Flex = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  ${props =>
+  ${(props) =>
     props.spaceBetween &&
     css`
       justify-content: space-between;
     `};
-  ${props =>
+  ${(props) =>
     props.flexEnd &&
     css`
       justify-content: flex-end;
     `};
-  ${props =>
+  ${(props) =>
     props.alignTop &&
     css`
       align-items: flex-start;
     `};
-  ${props =>
+  ${(props) =>
     props.noHeight &&
     css`
       height: 0;
     `};
-`
+`;
