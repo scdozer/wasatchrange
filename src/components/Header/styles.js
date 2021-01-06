@@ -46,6 +46,46 @@ export const Logo = styled.div`
   }
 `;
 
+export const MobileNav = styled.div`
+  padding: 20px;
+  width: 100%;
+  display: none;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 45px;
+  a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+  }
+  a:hover {
+    color: #666;
+  }
+  @media (max-width: 960px) {
+    a {
+      font-size: 16px;
+      line-height: 25px;
+      padding: 0px 10px;
+    }
+  }
+  @media (max-width: 800px) {
+    float: left;
+    a {
+      padding: 10px;
+    }
+    display: block;
+  }
+`;
+
+export const Open = styled.div`
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+`;
+
 export const Navigation = styled.div`
   color: black;
   font-size: 18px;
@@ -65,5 +105,8 @@ export const Navigation = styled.div`
       line-height: 25px;
       padding: 0px 10px;
     }
+  }
+  @media (max-width: 800px) {
+    display: none;
   }
 `;
