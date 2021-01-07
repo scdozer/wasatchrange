@@ -47,5 +47,8 @@ h2 {
   clear:both;
   display:block;
   width: 100%;
-  
+}
+
+.block a {
+  color: rgb(221, 107, 32);
 }
