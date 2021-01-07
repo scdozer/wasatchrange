@@ -6365,6 +6365,14 @@ gatsby-plugin-catch-links@^2.3.11:
     "@babel/runtime" "^7.11.2"
     escape-string-regexp "^1.0.5"
 
+gatsby-plugin-google-analytics@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.9.0.tgz#2256c06a78b58232a1012a7458921c1c24922f53"
+  integrity sha512-Zgiwn4GSJDyO0145pbpP8Ri0guAqCbJOPOxDH+jONasxVrSnEP6KCGDshxi0Cl31DkfebpVpTs+0MDRKvhQ/Qw==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    minimatch "3.0.4"
+
 gatsby-plugin-google-gtag@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-2.6.0.tgz#7ab997e81b3ce705de27fb3f3e408e88e2ec8a25"
